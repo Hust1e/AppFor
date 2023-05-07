@@ -24,6 +24,7 @@
                 <div class="event-price-block-price"><?php echo $event->event_price . ' ₽' ?></div>
             </div>
         </div>
+
         <div class="event-comment-block">
             <div class="event-comment-block-wrapper">
                 <div class="event-comment-block-header">Отзывы и оценки</div>

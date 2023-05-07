@@ -20,10 +20,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Заявки</a>
+                    <a class="nav-link" href="/dashboard">Заявки</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="events_create">Создать событие</a>
+                    <a class="nav-link" href="/dashboard/events">Мероприятия</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/events/create">Создать мероприятие</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Выйти</a>

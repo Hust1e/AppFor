@@ -11,12 +11,12 @@ class EventController extends Controller
     public function index()
     {
         $data = Event::all();
-        return view('event.eventIndex', ['events' => $data]);
+        return view('event.index', ['events' => $data]);
     }
 
     public function create()
     {
-        return view('event.eventCreate');
+        return view('event.create');
     }
 
     public function store(StoreEventRequest $request)
@@ -33,18 +33,22 @@ class EventController extends Controller
         return view('event.show', compact('event'));
     }
 
-    public function edit(string $id)
+    public function edit(Event $event)
     {
-        //
+        return view('event.edit', compact('event'));
     }
 
-    public function update(Request $request, string $id)
+    public function update(StoreEventRequest $request, Event $event)
     {
-        //
+        $data = $request->validated();
+        $event->update($data);
+
+        return redirect('/');
     }
 
-    public function destroy(string $id)
+    public function destroy(Event $event)
     {
-        //
+        $event->delete();
+        return redirect('/');
     }
 }

@@ -499,7 +499,7 @@ tr td a {
 /* COMMENT BLOCK */
 .event-comment-block {
     background-color: #93F2FF;
-    height: 464px;
+    height: 530px;
 }
 .event-comment-block-wrapper {
     padding: 50px 80px;
@@ -540,10 +540,22 @@ tr td a {
     font-size: 40px;
     color: #fff;
 }
+.events-table tr td a {
+    color: #1a202c;
+    text-decoration: none;
+    font-size: 50px;
+}
+tr td a {
+    color: black;
+}
+tr td button a {
+    color: white;
+}
 
-
-
-
+.event-buttons {
+    display: flex;
+    gap: 20px;
+}
 
 
 

@@ -8,14 +8,16 @@ use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
-    public function show_requests()
+    public function index()
     {
         $data = DB::table('requests')->get();
 
-        return view('dashboard', ['requests' => $data]);
+        return view('dashboard.requests', ['requests' => $data]);
     }
-    public function create()
+    public function events()
     {
+        $data = DB::table('events')->get();
 
+        return view('dashboard.events', ['events' => $data]);
     }
 }

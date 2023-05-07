@@ -3,7 +3,6 @@
 @section('content')
     <div class="body-wrapper">
         @foreach($events as $event)
-<!--            --><?php //var_dump($event->event_img); ?>
             <div class="event-form">
                 <div class="event-img">
                     <img src="{{asset("/images/$event->event_img")}}" alt="">

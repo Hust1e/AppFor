@@ -2,7 +2,7 @@
 @section('content')
     <div class="body-wrapper">
         <div class="event-form">
-            <form action="{{ route('events.store') }}" method="post" enctype="multipart/form-data">
+            <form action="{{ route('event.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <input type="text" placeholder="Название мероприятия" name="event_name">
                 <input type="text" placeholder="Описание" name="event_description">
