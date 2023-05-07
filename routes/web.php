@@ -18,3 +18,9 @@ Route::post('/', [\App\Http\Controllers\SiteController::class, 'store']);
 Route::get('/login', [\App\Http\Controllers\AuthController::class, 'index']);
 Route::post('/login', [\App\Http\Controllers\AuthController::class, 'store']);
 Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'index']);
+Route::resource('events', \App\Http\Controllers\EventController::class);
+
+//Route::get('/events', [\App\Http\Controllers\EventController::class, 'index']);
+//Route::get('/events-create', [\App\Http\Controllers\EventController::class, 'create']);
+//Route::post('/events', [\App\Http\Controllers\EventController::class, 'store']);
+

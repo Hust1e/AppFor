@@ -23,7 +23,7 @@
                     <a class="nav-link" href="#">Заявки</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Создать событие</a>
+                    <a class="nav-link" href="events_create">Создать событие</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Выйти</a>

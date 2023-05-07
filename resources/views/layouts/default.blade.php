@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Document</title>
     @vite('resources/css/app.css')
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,9 +23,9 @@
                 <div class="header-item">КУДА ПОЙДЕМ?</div>
             </div>
             <div class="header-menu-center">
-                <div class="header-item">Главная</div>
-                <div class="header-item">Компаниям</div>
-                <div class="header-item">Мероприятия</div>
+                <div class="header-item"><a href="/">Главная</a></div>
+                <div class="header-item"><a href="/">Компаниям</a></div>
+                <div class="header-item"><a href="/events">Мероприятия</a></div>
             </div>
             <div class="header-menu-right">
                 <button><a href="/">о нас</a></button>
