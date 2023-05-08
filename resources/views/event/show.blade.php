@@ -24,20 +24,45 @@
                 <div class="event-price-block-price"><?php echo $event->event_price . ' ₽' ?></div>
             </div>
         </div>
-
+        @if(isset($event->comments))
+            @foreach($event->comments()->get() as $comment)
+                <div class="event-comment-review">
+                    <div class="event-comment-review-author-block">
+                        <div class="event-comment-review-author-name"><?php echo $comment['author'] ?></div>
+                        <div class="event-comment-review-author-name comment-date"><?php echo $comment['created_at']; ?></div>
+                    </div>
+                    <div class="event-comment-review-author-comment"><?php echo $comment['comment']; ?></div>
+                </div>
+            @endforeach
+        @endif
         <div class="event-comment-block">
             <div class="event-comment-block-wrapper">
                 <div class="event-comment-block-header">Отзывы и оценки</div>
                 <div class="event-comment-form">
-                    <form action="">
-                        <div class="form-group">
-                            <label for="">Как вам событие?</label>
-                            <textarea name="" id="" cols="30" rows="5"></textarea>
+                    <form action="{{ route('comment.store', $event->id) }}" method="get">
+                        @csrf
+                        <div class="form-group r1">
+                            <label for="">Как вас зовут?</label>
+                            <input type="text" name="author">
                         </div>
-                        <button type="submit"><a href="">Оценить</a></button>
+                        <div class="form-group r3">
+                            <label for="">Как вам событие?</label>
+                            <textarea name="comment" id="" cols="30" rows="5"></textarea>
+                        </div>
+                        <button type="submit"><span>Оценить</span></button>
                     </form>
+
                 </div>
             </div>
         </div>
     </div>
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 @endsection

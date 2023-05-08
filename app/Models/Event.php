@@ -17,4 +17,9 @@ class Event extends Model
         'event_price',
         'event_http',
     ];
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }

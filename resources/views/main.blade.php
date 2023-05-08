@@ -9,7 +9,7 @@
             <div class="mainpage-main-subtext">Добро пожаловать! Это сервис для нахождения <br> актуальных и, что важно,
                 интересных <br> мероприятий в городе Казань для взрослых
             </div>
-            <div class="mainpage-main-button"><a href="">ГОТОВ К ОТДЫХУ</a></div>
+            <div class="mainpage-main-button"><a href="/events">ГОТОВ К ОТДЫХУ</a></div>
         </div>
     </div>
     <div class="mainpage-second-background"></div>
@@ -71,7 +71,7 @@
                 <h3>Компания? <br> Есть что предложить?</h3>
                 <h4>Заполняй форму, отвечаем в течение дня</h4>
                 <div class="mainpage-company-contact-form">
-                    <form action="" method="post">
+                    <form action="{{ route('request.store') }}" method="post">
                         @csrf
                         <input type="text" placeholder="Имя представителя компании" name="agent_name">
                         <input type="text" placeholder="Название компании" name="company_name">
