@@ -28,7 +28,9 @@
                 <div class="header-item"><a href="/events">Мероприятия</a></div>
             </div>
             <div class="header-menu-right">
-                <button><a href="/">о нас</a></button>
+                <div class="header-button">
+                    <a href="#anchor-link1">о нас</a>
+                </div>
             </div>
         </div>
     </header>
@@ -38,5 +40,6 @@
     @ KUDA POITI 2023
     <span>kudapoiti@gmail.com</span>
 </footer>
+<script src="{{ asset('/js/app.js') }}"></script>
 </body>
 </html>
