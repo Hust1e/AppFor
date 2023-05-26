@@ -23,9 +23,9 @@
                 мудрость Великого и непревзойденного <br> хомяка Пятница
             </div>
         </div>
-        <div class="mainpage-about-us">
+        <div class="mainpage-about-us" name="anchor-link1">
             <div class="mainpage-about-us-prev">
-                О нас
+                <span>О нас</span> 
             </div>
             <div class="mainpage-about-us-text">
                 Сервис “Куда пойдем” на рынке уже давно, и не сочетать сколько. Мы появились тогда, когда люди придумали
